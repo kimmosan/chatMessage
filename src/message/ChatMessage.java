@@ -21,6 +21,24 @@ public class ChatMessage implements Serializable {
     private int fontSize;
     private boolean isPrivate;
     private String privateName;
+    private boolean usernameChange = false;
+    private boolean userListUpdate = false;
+
+    public boolean isUserListUpdate() {
+        return userListUpdate;
+    }
+
+    public void setUserListUpdate(boolean userListUpdate) {
+        this.userListUpdate = userListUpdate;
+    }
+
+    public boolean isUsernameChange() {
+        return usernameChange;
+    }
+
+    public void setUsernameChange(boolean usernameChange) {
+        this.usernameChange = usernameChange;
+    }
 
     public String getUsername() {
         return username;
